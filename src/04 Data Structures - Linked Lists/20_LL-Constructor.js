@@ -10,18 +10,16 @@ class Node {
 class LinkedList {
   constructor(value) {
     const newNode = new Node(value)
-    this.next = null
     this.head = newNode
     this.tail = this.head
     this.length = 1
   }
 }
 
-const newLinkedList = new LinkedList(4)
+const myLinkedList = new LinkedList(4)
 
-console.log(newLinkedList)
+console.log(myLinkedList)
 
-// LinkedList { next: null,
-//     head: Node { value: 4, next: null },
-//     tail: Node { value: 4, next: null },
-//     length: 1 }
+// LinkedList { head: Node { value: 4, next: null },
+//   tail: Node { value: 4, next: null },
+//   length: 1 }
