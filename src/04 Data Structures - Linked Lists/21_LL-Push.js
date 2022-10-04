@@ -11,13 +11,13 @@ class LinkedList {
   // constructor
   constructor(value) {
     const newNode = new Node(value)
-     
+    this.head = newNode
     this.tail = this.head
     this.length = 1
   }
 
   // push
-  push = (value) => {
+  push(value) {
     const newNode = new Node(value)
     // if LinkedList is empty
     if (!this.head) {
@@ -33,15 +33,13 @@ class LinkedList {
 }
 
 const myLinkedList = new LinkedList(7)
-// console.log(myLinkedList)
-// LinkedList {
-//   head: Node { value: 7, next: null },
+console.log(myLinkedList)
+// LinkedList { head: Node { value: 7, next: null },
 //   tail: Node { value: 7, next: null },
 //   length: 1 }
 
 myLinkedList.push(4)
 console.log(myLinkedList)
-// LinkedList { push: [λ: push],
-//   head: Node { value: 7, next: Node { value: 4, next: null } },
+// LinkedList { head: Node { value: 7, next: Node { value: 4, next: null } },
 //   tail: Node { value: 4, next: null },
 //   length: 2 }
