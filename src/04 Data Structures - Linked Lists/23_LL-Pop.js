@@ -10,22 +10,22 @@ class Node {
 class LinkedList {
   // constructor
   constructor(value) {
-    const newLinkedList = new Node(value)
-    this.head = newLinkedList
+    const newNode = new Node(value)
+    this.head = newNode
     this.tail = this.head
     this.length = 1
   }
 
   // push
   push(value) {
-    const newLinkedList = new Node(value)
+    const newNode = new Node(value)
     // if empty list
     if (!this.head) {
-      this.head = newLinkedList
-      this.tail = newLinkedList
+      this.head = newNode
+      this.tail = newNode
     } else {
-      this.tail.next = newLinkedList
-      this.tail = newLinkedList
+      this.tail.next = newNode
+      this.tail = newNode
     }
     this.length++
   }
