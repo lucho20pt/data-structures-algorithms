@@ -93,20 +93,30 @@ class DoublyLinkedList {
 
   // get
   get(index) {
-    if (index < 0 || index > this.length) return undefined
+    if (index < 0 || index >= this.length) return undefined
 
     let temp = this.head
-    for (let i = 0; i < index; i++) {
-      temp = temp.next
+    if (index < this.length / 2) {
+      for (let i = 0; i < index; i++) {
+        temp = temp.next
+      }
+    } else {
+      temp = this.tail
+      for (let i = this.length - 1; i > index; i--) {
+        temp = temp.prev
+      }
     }
 
     return temp
   }
 }
 
-const myDoublyLinkedList = new DoublyLinkedList(1)
+const myDoublyLinkedList = new DoublyLinkedList(0)
+myDoublyLinkedList.push(1)
 myDoublyLinkedList.push(2)
 myDoublyLinkedList.push(3)
+myDoublyLinkedList.push(4)
+myDoublyLinkedList.push(5)
 
 // myDoublyLinkedList.pop()
 
@@ -114,6 +124,6 @@ myDoublyLinkedList.push(3)
 
 // myDoublyLinkedList.shift()
 
-console.log(myDoublyLinkedList.get(1))
+console.log(myDoublyLinkedList.get(3))
 
-// console.log(myDoublyLinkedList)
+console.log(myDoublyLinkedList)
