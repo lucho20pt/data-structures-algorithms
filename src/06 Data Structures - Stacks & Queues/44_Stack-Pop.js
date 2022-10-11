@@ -32,14 +32,11 @@ class Stack {
     if (this.length === 0) return undefined
 
     const temp = this.top
+    this.top = this.top.next
+    temp.next = null
 
-    if (this.length === 1) {
-      this.top = null
-    } else {
-      this.top = this.top.next
-      temp.next = null
-    }
     this.length--
+    return temp
   }
 }
 
@@ -47,7 +44,6 @@ const myStack = new Stack(0)
 myStack.push(1)
 myStack.push(2)
 
-myStack.pop()
 myStack.pop()
 
 console.log(myStack)
