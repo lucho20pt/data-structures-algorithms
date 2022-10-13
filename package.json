@@ -2,6 +2,7 @@
   "name": "data-structures-algorithms",
   "version": "1.0.0",
   "description": "https://www.udemy.com/course/data-structures-algorithms-javascript",
+  "type":"module",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
