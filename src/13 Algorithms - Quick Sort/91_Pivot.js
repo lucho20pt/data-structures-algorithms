@@ -10,7 +10,7 @@ const swap = (array, firstIdx, secondIdx) => {
 // pivot
 const pivot = (array, pivotIdx = 0, endIdx = array.length - 1) => {
   let swapIdx = pivotIdx
-  for (let i = pivotIdx + 1; i < endIdx; i++) {
+  for (let i = pivotIdx + 1; i <= endIdx; i++) {
     if (array[i] < array[pivotIdx]) {
       swapIdx++
       swap(array, swapIdx, i)
